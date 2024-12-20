@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UNICONS Line -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- BOXICONS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add favicon -->
+    <link rel="shortcut icon" href="./Images/Favicon.png" type="image/x-icon">
+    <!-- POPPINS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Shashank Srivathsava</title>
+</head>
+
+<body>
+    <main class="container max-w-full h-auto relative overflow-x-hidden font-poppins">
+        
+        <!-- SCROLL TO TOP BUTTON -->
+        <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
+            <div>
+                <a href="#home" class="scroll-smooth flex justify-center items-center w-14 h-14 sm:w-16 sm:h-16 border-4 sm:border-8 border-white border-double rounded-full bg-violet-600 transition-all shadow hover:shadow-lg transform hover:scale-110">
+                    <img class="object-cover object-center w-1/2 h-1/2 rounded-full" src="/Images/Upward Arrow.png">
+                </a>
+            </div>
+        </div>
+    
+        <!-- --------------- NAV BAR --------------- -->
+        <nav id="header" class="bg-white flex w-full h-[90px] z-[100] justify-between lg:justify-around items-center px-5 py-5 fixed border-b-2 shadow-lg">
+            <!-- LOGO -->
+            <div class="nav-logo relative">
+                <p class="nav-name text-3xl font-bold flex">
+                    <!-- <a href="#logo" class="text-violet-600">SSV <span class="text-5xl text-black">.</span></a> -->
+                    <img src="./Images/ManiLogo.png" alt="S" class="w-14">
+                </p>
+            </div>
+
+            <!-- NAV ITEMS (Visible in Large Screens) -->
+            <div class="nav-menu list-none relative hidden lg:flex" id="myNavMenu">
+                <ul class="nav_menu_list flex">
+                    <li class="nav_list list-none relative hover:text-violet-600">
+                        <a href="#home" class="nav-link font-semibold px-4 mx-5 active-link">Home</a>
+                    </li>
+                    <li class="nav_list list-none relative hover:text-violet-600">
+                        <a href="#about" class="nav-link font-semibold px-4 mx-5">About</a>
+                    </li>
+                    <li class="nav_list list-none relative hover:text-violet-600">
+                        <a href="#skills" class="nav-link font-semibold px-4 mx-5">Skills</a>
+                    </li>
+                    <li class="nav_list list-none relative hover:text-violet-600">
+                        <a href="#projects" class="nav-link font-semibold px-4 mx-5">Projects</a>
+                    </li>
+                    <li class="nav_list list-none relative hover:text-violet-600">
+                        <a href="#achievements" class="nav-link font-semibold px-4 mx-5">Achievements</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CONTACT BUTTON (Visible in Large Screens) -->
+            <a href="#contact" class="btn hidden lg:flex h-12 w-36 justify-center items-center font-semibold px-6 py-3 bg-[#e4e3e3] border-none rounded-lg transition-all duration-75 text-black hover:text-white hover:bg-violet-600">
+                Contact Me
+            </a>
+
+            <!-- MENU BUTTON (Visible in Small Screens) -->
+            <div class="nav-menu-btn lg:hidden justify-center items-center flex">
+                <button id="menu-toggle" class="text-gray-800 p-2 focus:outline-none">
+                    <svg id="open-icon" class="w-8 h-8 block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- MENU LIST (Hidden in Small Screens) -->
+            <div id="mobile-menu" class="fixed top-[95px] right-0 bg-violet-200 rounded-2xl shadow-lg w-full max-w-xs hidden lg:hidden">
+                <div class="list-none">
+                    <a class="px-6 py-5 flex items-center gap-3 hover:bg-violet-300" href="#home">
+                        <img src="./Images/Menu/Home (2).png" alt="Home" class="w-9 bg-violet-900 rounded-full p-1">
+                        <p class="text-violet-900 text-lg font-bold">Home</p>
+                    </a>
+                    <a class="px-6 py-5 flex items-center gap-3 hover:bg-violet-300" href="#about">
+                        <img src="./Images/Menu/About (2).png" alt="About" class="w-9 bg-violet-900 rounded-full p-1">
+                        <p class="text-violet-900 text-lg font-bold">About</p>
+                    </a>
+                    <a class="px-6 py-5 flex items-center gap-3 hover:bg-violet-300" href="#skills">
+                        <img src="./Images/Menu/Skills (2).png" alt="Skills" class="w-9 bg-violet-900 rounded-full p-1">
+                        <p class="text-violet-900 text-lg font-bold">Skills</p>
+                    </a>
+                    <a class="px-6 py-5 flex items-center gap-3 hover:bg-violet-300" href="#projects">
+                        <img src="./Images/Menu/Project.png" alt="Projects" class="w-9 bg-violet-900 rounded-full p-1">
+                        <p class="text-violet-900 text-lg font-bold">Projects</p>
+                    </a>
+                    <a class="px-6 py-5 flex items-center gap-3 hover:bg-violet-300" href="#achievements">
+                        <img src="./Images/Menu/Achievements (2).png" alt="Achievements" class="w-9 bg-violet-900 rounded-full p-1">
+                        <p class="text-violet-900 text-lg font-bold">Achievements</p>
+                    </a>
+                    <a class="px-6 py-5 flex items-center gap-3 hover:bg-violet-300" href="#contact">
+                        <img src="./Images/Menu/Contact (2).png" alt="Contact" class="w-9 bg-violet-900 rounded-full p-1">
+                        <p class="text-violet-900 text-lg font-bold">Contact</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- -------------- MAIN SECTION ---------------- -->
+        <div class="wrapper w-full flex-col justify-center items-center">
+            <!-- -------------- FEATURED BOX ---------------- -->
+            <section class="featured-box relative flex flex-col-reverse md:flex-row justify-around items-center max-w-full px-10 mt-20 pt-20 md:pt-5 md:mt-5 mx-auto gap-10" id="home">
+                <!-- LEFT PART: PROFILE DESCRIPTION -->
+                <div class="featured-text relative flex justify-center items-start md:min-h-[100vh] flex-col w-screen mx-1 px-10 md:w-1/2 gap-2">
+                    <div class="featured-name text-3xl md:text-4xl font-bold">
+                        <p>
+                            I'm, <br>
+                            <span class="typedText text-5xl text-violet-600">Shashank Srivathsava</span>
+                        </p>
+                    </div>
+                    <div class="featured-text-info text-lg md:text-xl mb-8">
+                        <p>
+                            As someone with a passion for technology, I find joy in both learning and leading.
+                            Recognized for my collaborative teamwork and innovative solutions,
+                            my drive to expand my expertise fuels my commitment to mastering new technologies.
+                            I thrive on implementing and launching projects, utilizing my strong power skills to drive success.
+                        </p>
+                    </div>
+                    <!-- BUTTON: HIRE ME & RESUME DOWNLOAD -->
+                    <div class="w-full featured-text-btn flex gap-5">
+                        <a href="mailto:shashanksrivathsavalade@gmail.com" class="btn blue-btn flex flex-col justify-center items-center text-sm md:text-base w-1/3 md:w-1/4 font-semibold px-3 py-4 md:px-6 md:py-3 bg-violet-600 border-none rounded-lg transition-all duration-75 text-white hover:bg-violet-900">
+                            Hire Me
+                        </a>
+                        <a class="btn flex justify-center items-center gap-2 font-semibold text-sm md:text-base px-3 py-4 md:px-6 md:py-3 bg-[#e4e3e3] border-none rounded-lg transition-all duration-75 text-black hover:text-white hover:bg-violet-600" href="assets/ShashankSrivathsava Resume.pdf" download="Shashank Srivathsava Resume">
+                            <i class="uil uil-file-alt"></i>Download Resume
+                        </a>
+                    </div>
+                    <!-- SOCIAL ICONS -->
+                    <div class="social_icons flex justify-center md:justify-start items-center mt-10 gap-5 md:gap-10  md:w-[70%]">
+                        <!-- LINKEDIN -->
+                        <a href="https://www.linkedin.com/in/shashank-srivathsava-lade-" class="icon border shadow-md shadow-gray-500 rounded-full bg-white w-11 h-11 p-2 flex justify-center items-center hover:scale-105">
+                            <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                            <img src="./Connect/LinkedIn.png" alt="LinkedIn">                        
+                        </a>
+
+                        <!-- GITHUB -->
+                        <a href="https://github.com/ShashankSrivathsava-Online" class="icon border shadow-md shadow-gray-500 rounded-full bg-white w-11 h-11 p-2 flex justify-center items-center hover:scale-105">
+                            <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                            <img src="./Connect/GithHub.png" alt="GithHub">
+                        </a>
+                        
+                        <!-- MAIL -->
+                        <a href="mailto:shashanksrivathsavalade@gmail.com" class="icon border shadow-md shadow-gray-500 rounded-full bg-white w-11 h-11 p-2 flex justify-center items-center hover:scale-105">
+                            <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                            <img src="./Connect/Mail.png" alt="Mail">
+                        </a>
+                        
+                        <!-- INSTAGRAM -->
+                        <a href="https://www.instagram.com/shashank_srivathsava" class="icon border shadow-md shadow-gray-500 rounded-full w-11 h-11 p-2 flex justify-center items-center hover:scale-105">
+                            <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                             <img src="./Connect/Instagram.png" alt="Instagram">
+                        </a>
+                       
+                        <!-- TWITTER -->
+                        <a href="https://twitter.com/Its_me_ssv" class="icon border shadow-md shadow-gray-500 rounded-full bg-white w-11 h-11 p-2 flex justify-center items-center hover:scale-105">
+                            <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                            <img src="./Connect/Twitter-X.png" alt="TwitterX">
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <!-- RIGHT PART: PROFILE IMAGE -->
+                <div class="featured-image flex justify-center items-center  md:min-h-[80vh] relative">
+                    <div class="image w-80 md:w-96 h-80 md:h-96 ease-in-out duration-[7s] relative">
+                        <img src="./Images/Potrait.jpg" alt="avatar" class="object-contain">
+                        <!-- Shadow element -->
+                        <!-- <div class="shadow absolute -bottom-5 left-[50%] w-36 h-7 bg-[#00000033] rounded-full translate-x-[-50%] "></div> -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- -------------- ABOUT BOX ---------------- -->
+            <section class="section w-full flex flex-col justify-center items-center gap-8 mt-20 md:pt-5 md:m-2" id="about">
+                <!-- HEADING -->
+                <div class="top-header flex flex-col justify-center items-center gap-2 mt-20">
+                    <h1 class="text-violet-600 text-3xl font-bold">About Me</h1>
+                    <span class="text-base text-gray-500">Academics and Educational Qualifications</span>
+                </div>
+                
+                <!-- EDUCATION QUALIFICATIONS -->
+                <div class="about-info w-[90%] md:w-[70%] border-2 border-gray-200 shadow-2xl rounded-3xl flex flex-col-reverse md:flex md:flex-row gap-10 justify-between items-center px-10 md:px-16 py-7 mx-16">
+                    <ul class="about-list flex flex-col justify-start gap-7">
+                        <li>
+                            <div class="about-btech">
+                                <h3 class="md:text-2xl font-bold">B.Tech, Computer Science and Engineering</h3>
+                                <p class="text-gray-500">Vaagdevi College of Engineering</p>
+                                <div class="about-date flex justify-start items-center text-gray-500">
+                                    <img src="/Images/Calender.png" alt="Calender" class="w-8 md:w-10">
+                                    <p>2019-2023</p>
+                                </div>
+                                <p class="text-gray-500">Aggregate: 7.21 CGPA</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about-inter">
+                                <h3 class="md:text-2xl font-bold">Intermediate, MPC</h3>
+                                <p class="text-gray-500">SR Junior College</p>
+                                <div class="about-date flex justify-start items-center text-gray-500">
+                                    <img src="/Images/Calender.png" alt="Calender" class="w-8 md:w-10">
+                                    <p>2017-2019</p>
+                                </div>
+                                <p class="text-gray-500">Aggregate: 88%</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about-school">
+                                <h3 class="md:text-2xl font-bold">Schooling</h3>
+                                <p class="text-gray-500">Pathfinder High School</p>
+                                <div class="about-date flex justify-start items-center text-gray-500">
+                                    <img src="/Images/Calender.png" alt="Calender" class="w-8 md:w-10">
+                                    <p>2017</p>
+                                </div>
+                                <p class="text-gray-500">Aggregate: 9.20 CGPA</p>
+                            </div>
+                        </li>
+                    </ul>
+                      
+                    <!-- GRADUATION IMAGE -->
+                    <div class="about-right-image md:w-[30%]">
+                        <img class="graduation-img" src="Images/Graduation.png" alt="Graduation pic">
+                    </div>
+                </div>
+            </section>
+
+            <!---------------- SKILLS BOX ------------------>
+            <section class="skills-section w-full flex flex-col justify-center items-center px-9 pt-32 md:pt-24 mt-32 md:p-20 gap-10 scale-110" id="skills">
+                
+                <!-- HEADING -->
+                <div class="top-header flex flex-col justify-center items-center">
+                    <h1 class="text-violet-600 text-3xl font-bold">Skills</h1>
+                    <span class="text-base text-gray-500">Tools and Technologies</span>
+                </div>
+
+                <!-- ALL SKILLS -->
+                <div class="skill-box w-full flex flex-col md:flex-row justify-center items-center gap-10">
+                    <!-- Skills Aquired - top -->
+                    <div class="md:w-[40%] skillbox-top border-2 p-10 flex flex-col rounded-2xl shadow-xl">
+                        <!-- HEADING -->
+                        <div class="skill-heading flex flex-col justify-center items-center mb-5 gap-1">
+                            <h3 class="text-xl md:text-2xl font-bold">Core Competencies</h3>
+                            <span class="text-gray-500 font-normal">Skills Aquired</span>
+                        </div>
+                        <!-- SKILLS -->
+                        <div class="all-skills flex flex-wrap justify-center items-center gap-5">
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/C.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">C</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/CPP.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">CPP</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/Python-Dark.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">Python</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/Oracle-.png" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">oracle</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/HTML.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">HTML</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/CSS.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">CSS</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/JavaScript.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">JS</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/TailwindCSS-Dark.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">Tailwind</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/Git.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">Git</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/Github-Dark.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">GitHub</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills to Aquire - Bottom -->
+                    <div class="md:w-[40%] skillbox-top border-2 p-10 flex flex-col rounded-2xl shadow-xl">
+                        <!-- HEADING -->
+                        <div class="skill-heading flex flex-col justify-center items-center mb-5 gap-1">
+                            <h3 class="text-xl md:text-2xl font-bold">Future Proficiencies</h3>
+                            <span class="text-gray-500 font-normal">Skills to Aquire</span>
+                        </div>
+                        <!-- SKILLS -->
+                        <div class="all-skills flex flex-wrap justify-center items-center gap-5">
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/React-Dark.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">ReactJS</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/NodeJS-Dark.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">NodeJS</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/ExpressJS-Dark.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">ExpressJS</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/NextJS-Dark.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">NextJS</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/MongoDB.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">MongoDB</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/MySQL-Dark.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">MySQL</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/Redux.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">Redux</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/Postman.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                    <p class="text-sm md:text-base">Postman</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/Docker.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">Docker</p>
+                            </div>
+                            <div class="icon-box flex flex-col justify-center items-center">
+                                <img src="/Skills/Java-Dark.svg" alt="" class="skill-img w-16 rounded-2xl hover:shadow-gray-400 shadow-md hover:scale-105 duration-200">
+                                <p class="text-sm md:text-base">Java</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>  
+
+                <!-- GITHUB CONTRIBUTIONS -->
+                <div class="contribution-calender w-full pt-8 flex flex-col justify-center items-center gap-8"> 
+                    <!-- HEADING -->
+                    <div class="top-header flex flex-col justify-center items-center">
+                        <h1 class="text-black md:text-xl font-bold">GitHub Contributions Calender</h1>
+                    </div>
+                    <img src="./Skills/Contribution.png" alt="GitHub-Contribution" class="w-full md:w-[65%] rounded-lg md:rounded-2xl">
+                </div>
+            </section>
+
+            <!-- -------------- PROJECT BOX ---------------- -->
+            <section class="section w-full flex flex-col justify-center items-center pt-32 md:p-24 mt-32 md:mt-20 gap-10 scale-110" id="projects">
+                <!-- HEADING -->
+                <div class="top-header flex flex-col justify-center items-center gap-1">
+                    <h1 class="text-violet-600 text-3xl font-bold">Projects</h1>
+                    <span class="text-base text-gray-500">Proof of Work</span>
+                </div>
+                <!-- PROJECTS -->
+                <div class="project-container flex flex-col md:flex-row justify-center items-center gap-5 w-full">
+                    
+                    <a href="https://codebooktest.netlify.app/" class="project-box border-2 rounded-2xl m-10 md:m-5 px-3 md:px-10 py-10 md:py-16 flex flex-col md:flex-row justify-between items-center gap-5 shadow-xl">
+                        <img src="/Projects/CodeBook.png" alt="Project CodeBook" class="w-full md:w-[45%] border-2 rounded-lg md:rounded-xl shadow-lg hover:scale-105 duration-200">
+                        <div class="flex flex-col justify-center items-center md:items-start gap-5">
+                            <h3 class="text-3xl font-bold text-violet-800">CodeBook</h3>
+                            <p class="text-xs md:text-base text-gray-500">
+                                (Currently under development)
+                            </p>
+                            <p class="text-xs md:text-base text-gray-700">
+                                CodeBook is a dynamic coding platform designed to simplify the learning of programming fundamentals and techniques.
+                                It offers interactive learning modules and practical resources tailored to beginners, 
+                                making it an ideal starting point for building coding skills efficiently.
+                            </p>
+                        </div>
+                    </a>
+                    
+                    <!-- <div class="project-box border-2 rounded-2xl px-20 md:px-24 py-36 flex flex-col justify-between items-center gap-5 shadow-xl">
+                        <i class="uil uil-briefcase-alt text-5xl text-violet-600"></i>
+                        <div class="flex flex-col justify-center items-center">
+                            <h3 class="text-xl font-bold">UI Interfaces</h3>
+                            <label class="text-sm md:text-base text-gray-500">10+ Website Interfaces</label>
+                        </div>
+                    </div>
+                    <div class="project-box border-2 rounded-2xl px-20 md:px-24 py-36 flex flex-col justify-between items-center gap-5 shadow-xl">
+                        <i class="uil uil-briefcase-alt text-5xl text-violet-600"></i>
+                        <div class="flex flex-col justify-center items-center">
+                            <h3 class="text-xl font-bold">Fullstack Sites</h3>
+                            <label class="text-sm md:text-base text-gray-500">2 Websites</label>
+                        </div>
+                    </div> -->
+                    <!-- -------------------------------------------------- -->
+                    <!-- <div class="project-box">
+                        <i class="uil uil-award"></i>
+                        <h3>Full Stack Sites</h3>
+                        <label>2 Websites</label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-award"></i>
+                        <h3>Full Stack Sites</h3>
+                        <label>2 Websites</label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-award"></i>
+                        <h3>Full Stack Sites</h3>
+                        <label>2 Websites</label>
+                    </div> -->
+                    <!-- --------------------------------------------------- -->
+                </div>
+            </section>
+
+            <!----------------- ACHIEVEMENTS SECTION --------------- -->
+            <section class="achievements-section w-full flex flex-col justify-center items-center px-10 pt-32 md:p-20 mt-32 md:mt-20 gap-7 scale-110" id="achievements">
+                <!-- HEADING -->
+                <div class="top-header flex flex-col justify-center items-center gap-1">
+                    <h1 class="section-title text-violet-600 text-3xl font-bold">Achievements</h1>
+                    <span class="text-base text-gray-500">Highlights and Honors</span>  
+                </div>
+                <!-- ACHIEVEMENT GALLERY -->
+                <div class="achievement-gallery w-full md:w-5/6 flex flex-wrap md:flex-row justify-center items-stretch gap-5">
+                    <div class="achievement-item flex flex-col border rounded-2xl md:w-1/4 shadow-xl text-gray-500 font-semibold">
+                        <img src="/achievements/Microsoft.jpg" alt="Achievement 1" class="rounded-t-2xl">
+                        <p class="achievement-caption p-3 text-xs flex flex-grow    ">Honored to participate in the "Microsoft - Future Ready Technology Summit Bengaluru" – an insightful gathering where I had the privilege of experiencing firsthand the inspiring words of Satya Nadella himself. Grateful for the opportunity to engage with industry leaders and explore the future of technology. </p>
+                    </div>
+                    <div class="achievement-item flex flex-col border rounded-2xl md:w-1/4 shadow-xl text-gray-500 font-semibold">
+                        <img src="/achievements/Banglore Team.jpg" alt="Achievement 2" class="rounded-t-2xl">
+                        <p class="achievement-caption p-3 text-xs flex flex-grow    ">Had the enriching experience of engaging with fellow students from various colleges at the 'Microsoft - Future Ready Technology Summit' in Bengaluru. Grateful for the opportunity to connect and share insights with future technology leaders</p>
+                    </div>
+                    <div class="achievement-item flex flex-col border rounded-2xl md:w-1/4 shadow-xl text-gray-500 font-semibold">
+                        <img src="/achievements/satya nadella.jpg" alt="Achievement 3" class="rounded-t-2xl">
+                        <p class="achievement-caption p-3 text-xs flex flex-grow    ">Satya Nadella, Chairman and CEO, Microsoft addressing developers and technology leaders at the ‘Microsoft Future Ready Technology Summit’ in Bengaluru, India, on January 5, 2023</p>
+                    </div>
+                    <div class="achievement-item flex flex-col border rounded-2xl md:w-1/4 shadow-xl text-gray-500 font-semibold">
+                        <img src="/achievements/convo.jpg" alt="Achievement 4" class="rounded-t-2xl">
+                        <p class="achievement-caption p-3 text-xs flex flex-grow    ">Satya Nadella, Chairman and CEO, Microsoft, in conversation with Nandan Nilekani, Chairman & Co-Founder, Infosys &Founding Chairman UIDAI (Aadhaar) at the ‘Microsoft Future Ready Technology Summit’ in Bengaluru, India, on January 5, 2023</p>
+                    </div>
+                    <div class="achievement-item flex flex-col border rounded-2xl md:w-1/4 shadow-xl text-gray-500 font-semibold">
+                        <img src="/achievements/Graduated.jpg" alt="Achievement 4" class="rounded-t-2xl">
+                        <p class="achievement-caption p-3 text-xs flex flex-grow    ">Wrapped up my B.Tech in Computer Science on February 17, 2024 with my Graduation ceremony. It was an incredible journey filled with valuable experiences and knowledge. From learning to mastering skills, every moment contributed to my career growth.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- -------------- CONTACT BOX ---------------- -->
+            <section class="section w-full flex flex-col gap-10 mt-32 md:mt-10 mb-40 pt-32" id="contact">
+                <!-- HEADING -->
+                <div class="top-header flex flex-col justify-center items-center gap-1">
+                    <h1 class="section-title text-violet-600 text-3xl font-bold">Get in touch</h1>
+                    <span class="text-base text-gray-500">Excited to here from you!</span>
+                </div>
+                <!-- CONNECT -->
+                <div class="row w-full flex flex-col md:flex-row justify-center items-center gap-5">
+                    <!-- LEFT PART -->
+                    <div class="col border rounded-2xl w-[90%] md:w-[40%] h-[20vh] md:h-[55vh] flex justify-center items-center bg-violet-600">
+                        <div class="contact-info flex flex-col justify-center items-center gap-10">
+                            <h2 class="text-3xl font-bold text-white">Find Me <i class="uil uil-corner-right-down"></i></h2>
+                            <div class="flex flex-col justify-center items-center gap-2 text-white">
+                                <p class="text-xs md:text-base"><i class="uil uil-envelope"></i> Email: shashanksrivathsavalade@gmail.com</p>
+                                <!-- <p><i class="uil uil-phone"></i> +91 8978712611</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RIGHT PART -->
+                    <div class="col w-[90%] md:w-[40%] h-96 flex justify-center items-start">
+                        <div class="form-control flex flex-col gap-3 h-full">
+                            <div class="flex flex-col gap-3 h-full w-full">
+                                <!-- NAME & EMAIL -->
+                                <div class="form-inputs flex justify-center items-center gap-5">
+                                    <input type="text" class="w-[90%] input-field border-2 border-gray-300 rounded-2xl pr-10 pl-5 py-5 " placeholder="Name">
+                                    <input type="text" class="w-[90%] input-field border-2 border-gray-300 rounded-2xl pr-10 pl-5 py-5 " placeholder="Email">
+                                </div>
+                                <!-- TEXT AREA -->
+                                <div class="text-area flex justify-center items-stretch h-full">
+                                    <textarea placeholder="Message" class="border-2 border-gray-300 rounded-2xl pr-5 pl-5 py-5 w-full h-full"></textarea>
+                                </div>
+                            </div>
+                            <!-- BUTTON -->
+                            <a class="form-button bg-violet-600 hover:bg-violet-800 px-6 py-4 rounded-xl text-white w-[31%] md:w-[21%] justify-center items-center">
+                                <button class="btn">Send <i class="uil uil-message"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- --------------- FOOTER --------------- -->
+        <footer class="w-full flex flex-col justify-center items-center gap-9 relative bg-[#0a1535] text-[#f9f9f9] h-36 mt-32 pt-24 pb-32">
+            <article class="w-[90%] flex flex-col justify-center items-center gap-4 pt-6 px-12 pb-6 -mt-24 mx-5 mb-5 rounded-xl bg-gradient-to-r from-[#8c50e6] to-[#5685fc]">
+                <!-- FOOTER ICONS -->
+                <div class="footer-social-icons flex mt-4 justify-center items-center gap-8">
+                    <!-- LINKEDIN -->
+                    <a href="https://www.linkedin.com/in/shashank-srivathsava-lade-" class="icon rounded-full bg-white w-9 h-9 md:w-11 md:h-11 p-2 flex justify-center items-center hover:scale-105">
+                        <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                        <img src="./Connect/LinkedIn.png" alt="LinkedIn">                        
+                    </a>
+
+                    <!-- GITHUB -->
+                    <a href="https://github.com/ShashankSrivathsava-Online" class="icon rounded-full bg-white w-9 h-9 md:w-11 md:h-11 p-2 flex justify-center items-center hover:scale-105">
+                        <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                        <img src="./Connect/GithHub.png" alt="GithHub">
+                    </a>
+                    
+                    <!-- MAIL -->
+                    <a href="mailto:shashanksrivathsavalade@gmail.com" class="icon rounded-full bg-white w-9 h-9 md:w-11 md:h-11 p-2 flex justify-center items-center hover:scale-105">
+                        <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                        <img src="./Connect/Mail.png" alt="Mail">
+                    </a>
+                    
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/shashank_srivathsava" class="icon rounded-full bg-white w-9 h-9 md:w-11 md:h-11 p-2 flex justify-center items-center hover:scale-105">
+                        <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                         <img src="./Connect/Instagram.png" alt="Instagram">
+                    </a>
+                   
+                    <!-- TWITTER -->
+                    <a href="https://twitter.com/Its_me_ssv" class="icon rounded-full bg-white w-9 h-9 md:w-11 md:h-11 p-2 flex justify-center items-center hover:scale-105">
+                        <!-- <i class="bx bxl-instagram-alt text-violet-600 text-2xl"></i> -->
+                        <img src="./Connect/Twitter-X.png" alt="TwitterX">
+                    </a>
+                </div>
+            </article>
+            <!-- COPYRIGHT -->
+            <div class="bottom-footer">
+                <a href="#home" style="text-decoration: none; color: white;" class="text-xs md:text-base">Copyright © Shashank Srivathsava - All rights reserved</a> 
+            </div>
+        </footer>
+    </main>
+    
+    <!-- ----- MAIN JS ----- -->
+    <!-- JavaScript to Handle Menu Toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('open-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        menuToggle.addEventListener('click', () => {
+            // Toggle the mobile menu visibility
+            mobileMenu.classList.toggle('hidden');
+            
+            // Swap between open and close icons
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
